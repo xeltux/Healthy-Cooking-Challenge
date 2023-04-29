@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="HealthyCookingChallenge"
+run/main_scene="res://Scenes/Start-screen.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+BacroundMusic="*res://Scenes/BacroundMusic.tscn"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [rendering]
 
