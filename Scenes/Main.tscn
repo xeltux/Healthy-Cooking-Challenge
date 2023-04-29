@@ -1,11 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=3 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Texture2D" uid="uid://crh5adlrouc2f" path="res://Assets/Sprite Art/Cooking Board copy.png" id="1_s2iu6"]
+[ext_resource type="Theme" uid="uid://c7v4phxm3hrcr" path="res://Assets/Themes/maintheme.tres" id="2_udn6w"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 289.0
+offset_bottom = 654.0
 
 [node name="CookingBoardCopy" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(581.25, 324.25)
 scale = Vector2(10.1172, 10.1172)
 texture = ExtResource("1_s2iu6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 14.0
+offset_right = 255.0
+offset_bottom = 40.0
+theme = ExtResource("2_udn6w")
+theme_override_font_sizes/font_size = 23
+text = "Ingredients"
