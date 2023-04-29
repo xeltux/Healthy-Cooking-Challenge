@@ -30,7 +30,7 @@ theme = ExtResource("1_gngw8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 192.0
-offset_top = 168.0
+offset_top = 176.0
 offset_right = 960.0
 offset_bottom = 240.0
 theme = ExtResource("1_gngw8")
