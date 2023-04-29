@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=2 format=3 uid="uid://bhju4s0arbeov"]
+
+[ext_resource type="Texture2D" uid="uid://crh5adlrouc2f" path="res://Assets/Sprite Art/Cooking Board copy.png" id="1_s2iu6"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="CookingBoardCopy" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(581.25, 324.25)
+scale = Vector2(10.1172, 10.1172)
+texture = ExtResource("1_s2iu6")
