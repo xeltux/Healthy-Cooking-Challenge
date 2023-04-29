@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7pqu8irlju5p"]
+[gd_scene load_steps=3 format=3 uid="uid://b7pqu8irlju5p"]
 
-[ext_resource type="AudioStream" uid="uid://buhlsqrg7d2dc" path="res://Assets/Music/Hackathon.mp3" id="1_vxfjm"]
+[ext_resource type="AudioStream" uid="uid://bqy648nkdusp7" path="res://Assets/Music/Hackathon.wav" id="1_0mn6s"]
+[ext_resource type="Script" path="res://Scripts/BackgroundMusic.gd" id="2_ss05p"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_vxfjm")
+stream = ExtResource("1_0mn6s")
 autoplay = true
+script = ExtResource("2_ss05p")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

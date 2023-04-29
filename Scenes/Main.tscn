@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=13 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
 [ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
@@ -8,10 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://cr2x0od2crfhw" path="res://Scenes/Ingredients/colliflower.tscn" id="8_7axrm"]
 [ext_resource type="PackedScene" uid="uid://dimoou4pmc4a3" path="res://Scenes/Ingredients/bellpepper.tscn" id="8_iav6a"]
 [ext_resource type="PackedScene" uid="uid://b7t4otv6leu73" path="res://Scenes/Ingredients/onion.tscn" id="8_qoe63"]
+[ext_resource type="Texture2D" uid="uid://ciytikawppm7p" path="res://Assets/Sprite Art/Ingredientsicon.png" id="9_8tvse"]
+[ext_resource type="Texture2D" uid="uid://cvsqbtkkrpsvt" path="res://Assets/Sprite Art/Journalicon.png" id="10_1wcnq"]
+[ext_resource type="Script" path="res://Scripts/Ingredients Menu.gd" id="13_wtgbo"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53gyg"]
-radius = 90.0
-height = 364.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s0dym"]
+radius = 80.0
+height = 320.0
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cvkph")
@@ -80,12 +83,62 @@ position = Vector2(305, 505)
 [node name="bellpepper" parent="." instance=ExtResource("8_iav6a")]
 position = Vector2(438, 500)
 
-[node name="Pot" type="Area2D" parent="."]
+[node name="JournalMenu" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pot"]
-position = Vector2(957, 447)
+[node name="IngredientsMenu" type="Node2D" parent="."]
+visible = false
+script = ExtResource("13_wtgbo")
+
+[node name="ColorRect" type="ColorRect" parent="IngredientsMenu"]
+offset_left = 296.0
+offset_top = 120.0
+offset_right = 726.0
+offset_bottom = 595.0
+color = Color(1, 0.937255, 0.870588, 1)
+
+[node name="Label" type="Label" parent="IngredientsMenu"]
+offset_left = 352.0
+offset_top = 144.0
+offset_right = 671.0
+offset_bottom = 176.0
+theme = ExtResource("4_gylhk")
+text = "Ingredients"
+
+[node name="Bell Pepper" type="Button" parent="IngredientsMenu"]
+offset_left = 416.0
+offset_top = 216.0
+offset_right = 624.0
+offset_bottom = 248.0
+theme = ExtResource("4_gylhk")
+text = "Bell Pepper"
+
+[node name="Ingredients" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 1079.0
+offset_top = 104.0
+offset_right = 1152.0
+offset_bottom = 168.0
+toggle_mode = true
+texture_normal = ExtResource("9_8tvse")
+stretch_mode = 0
+
+[node name="Journal" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 1080.0
+offset_top = 16.0
+offset_right = 1152.0
+offset_bottom = 88.0
+toggle_mode = true
+texture_normal = ExtResource("10_1wcnq")
+stretch_mode = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(960, 448)
 rotation = -1.5708
-shape = SubResource("CapsuleShape2D_53gyg")
+shape = SubResource("CapsuleShape2D_s0dym")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
-[connection signal="body_entered" from="Pot" to="." method="_on_pot_body_entered"]
+[connection signal="toggled" from="Ingredients" to="." method="_on_ingredients_toggled"]
+[connection signal="toggled" from="Journal" to="." method="_on_journal_toggled"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_3hypm"]
 [ext_resource type="Texture2D" uid="uid://br73okar88mo4" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Cauliflower.png" id="1_i42ul"]
 [ext_resource type="Texture2D" uid="uid://n5m8bwgl0nii" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Choppedcauliflower.png" id="2_vqrgc"]
-[ext_resource type="AudioStream" uid="uid://dlg00sie1aa3k" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="3_eqorw"]
+[ext_resource type="AudioStream" uid="uid://d0s1x67ykoitt" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="3_eqorw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_colc0"]
 radius = 47.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hth5fc11ahkh"
-path="res://.godot/imported/Choppedsage.png-7ce02884b53c96c5b276e24e22c0033b.ctex"
+uid="uid://ciytikawppm7p"
+path="res://.godot/imported/Ingredientsicon.png-cf25efea682d9d6fc372d8102e6c52de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Sage Rubbed Salmon/Choppedsage.png"
-dest_files=["res://.godot/imported/Choppedsage.png-7ce02884b53c96c5b276e24e22c0033b.ctex"]
+source_file="res://Assets/Sprite Art/Ingredientsicon.png"
+dest_files=["res://.godot/imported/Ingredientsicon.png-cf25efea682d9d6fc372d8102e6c52de.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hth5fc11ahkh"
-path="res://.godot/imported/Choppedsage.png-7ce02884b53c96c5b276e24e22c0033b.ctex"
+uid="uid://hit4vr50pvjd"
+path="res://.godot/imported/Choppedcheese.png-5afec03b2c8cf0775806b44590d5c79c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Sage Rubbed Salmon/Choppedsage.png"
-dest_files=["res://.godot/imported/Choppedsage.png-7ce02884b53c96c5b276e24e22c0033b.ctex"]
+source_file="res://Assets/Sprite Art/Tutorial Stuff/Choppedcheese.png"
+dest_files=["res://.godot/imported/Choppedcheese.png-5afec03b2c8cf0775806b44590d5c79c.ctex"]
 
 [params]
 
