@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwjfxwoetucjt"
-path="res://.godot/imported/Pennepasta.png-4c314bb1948138c13a27340f46aea267.ctex"
+uid="uid://bjsyd1xlxegy5"
+path="res://.godot/imported/Choppedcheese.png-5afec03b2c8cf0775806b44590d5c79c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Tutorial Stuff/Pennepasta.png"
-dest_files=["res://.godot/imported/Pennepasta.png-4c314bb1948138c13a27340f46aea267.ctex"]
+source_file="res://Assets/Sprite Art/Tutorial Stuff/Choppedcheese.png"
+dest_files=["res://.godot/imported/Choppedcheese.png-5afec03b2c8cf0775806b44590d5c79c.ctex"]
 
 [params]
 

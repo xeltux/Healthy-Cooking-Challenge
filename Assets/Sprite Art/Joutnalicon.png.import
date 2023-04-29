@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwjfxwoetucjt"
-path="res://.godot/imported/Pennepasta.png-4c314bb1948138c13a27340f46aea267.ctex"
+uid="uid://cyedb5a5lw3rg"
+path="res://.godot/imported/Joutnalicon.png-ae76fe0f7989045ea233203f81fb1916.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Tutorial Stuff/Pennepasta.png"
-dest_files=["res://.godot/imported/Pennepasta.png-4c314bb1948138c13a27340f46aea267.ctex"]
+source_file="res://Assets/Sprite Art/Joutnalicon.png"
+dest_files=["res://.godot/imported/Joutnalicon.png-ae76fe0f7989045ea233203f81fb1916.ctex"]
 
 [params]
 
