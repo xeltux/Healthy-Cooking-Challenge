@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpvagyovbsbp"
-path="res://.godot/imported/Peppershaker.png-0a0076a0ce4fdf1f7565524ff4d37c92.ctex"
+uid="uid://dv811mnfrt3kp"
+path="res://.godot/imported/Cuttingboardwithcooking.png-18e1bb0c59ba066b42837fe7fb103994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Sage Rubbed Salmon/Peppershaker.png"
-dest_files=["res://.godot/imported/Peppershaker.png-0a0076a0ce4fdf1f7565524ff4d37c92.ctex"]
+source_file="res://Assets/Sprite Art/Cuttingboardwithcooking.png"
+dest_files=["res://.godot/imported/Cuttingboardwithcooking.png-18e1bb0c59ba066b42837fe7fb103994.ctex"]
 
 [params]
 
