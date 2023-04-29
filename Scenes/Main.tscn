@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=7 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
 [ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
 [ext_resource type="Texture2D" uid="uid://di1swrw4tx3rt" path="res://Assets/Sprite Art/Nathan.png" id="3_m0bhs"]
 [ext_resource type="Theme" uid="uid://c7v4phxm3hrcr" path="res://Assets/Themes/maintheme.tres" id="4_gylhk"]
 [ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="5_jbujk"]
+[ext_resource type="PackedScene" uid="uid://cw3hqainuvvo5" path="res://Scenes/Ingredients/Colliflower.tscn" id="6_xmb2s"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cvkph")
@@ -31,6 +32,7 @@ text = "Menu"
 flat = true
 
 [node name="Menu" type="Node2D" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Menu"]
 offset_left = 248.0
@@ -62,5 +64,8 @@ offset_bottom = 311.0
 theme = ExtResource("4_gylhk")
 theme_override_font_sizes/font_size = 11
 text = "Music"
+
+[node name="Colliflower" parent="." instance=ExtResource("6_xmb2s")]
+position = Vector2(481, 500)
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
