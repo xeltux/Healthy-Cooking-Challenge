@@ -1,15 +1,17 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	DialogueManager.show_example_dialogue_balloon(load("res://Assets/Dialog/tutorial.dialogue"), "start")
 	$Menu.visible = false
 
+var menuIsBeingUsed = false
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if game.tutorial_done == true:
+		$Nathan.visible == false
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
@@ -18,4 +20,9 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 
 func _on_menu_button_pressed():
-	$Menu.visible = true
+	if menuIsBeingUsed == false:
+		$Menu.visible = true
+		menuIsBeingUsed = true
+	else:
+		$Menu.visible = false
+		menuIsBeingUsed = false

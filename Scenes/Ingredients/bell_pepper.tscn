@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc5pd66d37yk5"]
+
+[ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_5dr8j"]
+[ext_resource type="Texture2D" uid="uid://cyqqxqtshuyv5" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Bellpepper.png" id="2_4oyxg"]
+[ext_resource type="Texture2D" uid="uid://cbam1ujgpu74e" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Choppedbellpepper.png" id="3_bix88"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vte1m"]
+radius = 47.0
+
+[node name="BellPepper" type="Node2D"]
+script = ExtResource("1_5dr8j")
+
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_4oyxg")
+
+[node name="Chopped" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(7, 5)
+scale = Vector2(4.11328, 4.11328)
+texture = ExtResource("3_bix88")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vte1m")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event" flags=18]
