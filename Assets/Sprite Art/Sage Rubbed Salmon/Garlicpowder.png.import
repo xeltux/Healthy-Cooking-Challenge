@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cis7k46yt53tf"
+<<<<<<< HEAD
+uid="uid://btyspbukxc6ma"
+=======
+uid="uid://d8fyekympj1l"
+>>>>>>> 8c6c55ae0951c5493cec3ee119ac0e604083e9ce
 path="res://.godot/imported/Garlicpowder.png-3adbcb65234a5e49b139ff275d5f0c92.ctex"
 metadata={
 "vram_texture": false

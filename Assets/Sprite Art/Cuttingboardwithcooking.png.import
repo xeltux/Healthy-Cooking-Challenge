@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://cccihmgmrvjol"
-=======
-uid="uid://dlqwsdap7tyx5"
->>>>>>> 8c6c55ae0951c5493cec3ee119ac0e604083e9ce
-path="res://.godot/imported/Cheese.png-6afacccc7c059ed0ca0ffbfe52afaadb.ctex"
+uid="uid://dv811mnfrt3kp"
+path="res://.godot/imported/Cuttingboardwithcooking.png-18e1bb0c59ba066b42837fe7fb103994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Tutorial Stuff/Cheese.png"
-dest_files=["res://.godot/imported/Cheese.png-6afacccc7c059ed0ca0ffbfe52afaadb.ctex"]
+source_file="res://Assets/Sprite Art/Cuttingboardwithcooking.png"
+dest_files=["res://.godot/imported/Cuttingboardwithcooking.png-18e1bb0c59ba066b42837fe7fb103994.ctex"]
 
 [params]
 

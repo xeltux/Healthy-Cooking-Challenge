@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw02dqmxqbqwd"
+<<<<<<< HEAD
+uid="uid://b8mo6hh32el8w"
+=======
+uid="uid://dnjr5oa0wwvib"
+>>>>>>> 8c6c55ae0951c5493cec3ee119ac0e604083e9ce
 path="res://.godot/imported/Choppercarrot.png-493de19454a01e6071b3380b9061b5af.ctex"
 metadata={
 "vram_texture": false

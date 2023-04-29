@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
+uid="uid://ceb3jptw05sqf"
+=======
 uid="uid://bxmudku5gsbfh"
+>>>>>>> 761f41f84a89bfa1252e101fbd6a924154f38ed6
 path="res://.godot/imported/672731-danilosfx-carrot-peeling_C17vhLhM.wav-124f93864f92036a3b29d987e0a9338f.sample"
 
 [deps]
