@@ -10,13 +10,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("ui_touch"):
-		if dragging == false:
-			$Thing.position = get_viewport().get_mouse_position()
+	if dragging == true:
+		global_position = lerp(global_position, get_global_mouse_position(), 25*delta)
 
 func _on_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		$Cut.play()
 		$Normal.visible = false
-		$Chopped.visible = true
-		
+		$Chopped.visible = true 
+		if Input.is_action_just_pressed('ui_touch'):
+			dragging = true
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT and not event.pressed:
+			dragging = false
