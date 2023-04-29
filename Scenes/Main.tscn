@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
-[ext_resource type="Texture2D" uid="uid://crh5adlrouc2f" path="res://Assets/Sprite Art/Cooking Board copy.png" id="1_s2iu6"]
+[ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
 [ext_resource type="Texture2D" uid="uid://di1swrw4tx3rt" path="res://Assets/Sprite Art/Nathan.png" id="3_m0bhs"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cvkph")
 
-[node name="CookingBoardCopy" type="Sprite2D" parent="."]
+[node name="Cuttingboardupscaled" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(540.25, 325)
-scale = Vector2(10.2422, 10.2187)
-texture = ExtResource("1_s2iu6")
+position = Vector2(610, 326)
+scale = Vector2(10.0611, 10.2188)
+texture = ExtResource("2_tmyru")
 
 [node name="Nathan" type="Sprite2D" parent="."]
 texture_filter = 1

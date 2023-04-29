@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk82i5nlmnbon"
+path="res://.godot/imported/Outro Song Podcast.mp3-8f8614af8334684c6224228cbacde766.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Outro Song Podcast.mp3"
+dest_files=["res://.godot/imported/Outro Song Podcast.mp3-8f8614af8334684c6224228cbacde766.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
