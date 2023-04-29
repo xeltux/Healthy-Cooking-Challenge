@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=10 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
 [ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
@@ -9,18 +9,22 @@
 [ext_resource type="PackedScene" uid="uid://dimoou4pmc4a3" path="res://Scenes/Ingredients/bellpepper.tscn" id="8_iav6a"]
 [ext_resource type="PackedScene" uid="uid://b7t4otv6leu73" path="res://Scenes/Ingredients/onion.tscn" id="8_qoe63"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53gyg"]
+radius = 90.0
+height = 364.0
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cvkph")
 
 [node name="Cuttingboardupscaled" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(610, 326)
+position = Vector2(519, 326)
 scale = Vector2(10.0611, 10.2188)
 texture = ExtResource("2_tmyru")
 
 [node name="Nathan" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(126, 396)
+position = Vector2(103, 399)
 scale = Vector2(10.2656, 10.8594)
 texture = ExtResource("3_m0bhs")
 
@@ -34,7 +38,7 @@ text = "Menu"
 flat = true
 
 [node name="Onion" parent="." instance=ExtResource("8_qoe63")]
-position = Vector2(695, 500)
+position = Vector2(568, 499)
 
 [node name="Menu" type="Node2D" parent="."]
 visible = false
@@ -71,9 +75,17 @@ theme_override_font_sizes/font_size = 11
 text = "Music"
 
 [node name="Colliflower" parent="." instance=ExtResource("8_7axrm")]
-position = Vector2(433, 507)
+position = Vector2(305, 505)
 
 [node name="bellpepper" parent="." instance=ExtResource("8_iav6a")]
-position = Vector2(566, 497)
+position = Vector2(438, 500)
+
+[node name="Pot" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pot"]
+position = Vector2(957, 447)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_53gyg")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="body_entered" from="Pot" to="." method="_on_pot_body_entered"]

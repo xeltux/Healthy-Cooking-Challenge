@@ -25,3 +25,8 @@ func _on_menu_button_pressed():
 	else:
 		$Menu.visible = false
 		menuIsBeingUsed = false
+
+func _on_pot_body_entered(body):
+	var root_node = body.get_node()
+	var root_node_name = root_node.get_parent().get_name()
+	print(root_node_name)
