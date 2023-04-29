@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvlik3k57bq83"
-path="res://.godot/imported/Onion.png-5c4a1f4d2baad8c79c378b4ecdecee0b.ctex"
+path="res://.godot/imported/Onion.png-2fdbb62146cf1d56083ef1b6d82b9b3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Recipe 1 copy/Onion.png"
-dest_files=["res://.godot/imported/Onion.png-5c4a1f4d2baad8c79c378b4ecdecee0b.ctex"]
+source_file="res://Assets/Sprite Art/Stir Fried Cauliflower/Onion.png"
+dest_files=["res://.godot/imported/Onion.png-2fdbb62146cf1d56083ef1b6d82b9b3c.ctex"]
 
 [params]
 

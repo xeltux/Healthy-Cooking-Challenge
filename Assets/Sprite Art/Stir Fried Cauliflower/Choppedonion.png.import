@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmb7p4w8nnp6v"
-path="res://.godot/imported/Choppedonion.png-f2171e7c97796071f707d6966fcd6449.ctex"
+path="res://.godot/imported/Choppedonion.png-f28de4ab42f30d2395d8ea78d8e9d617.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Recipe 1 copy/Choppedonion.png"
-dest_files=["res://.godot/imported/Choppedonion.png-f2171e7c97796071f707d6966fcd6449.ctex"]
+source_file="res://Assets/Sprite Art/Stir Fried Cauliflower/Choppedonion.png"
+dest_files=["res://.godot/imported/Choppedonion.png-f28de4ab42f30d2395d8ea78d8e9d617.ctex"]
 
 [params]
 

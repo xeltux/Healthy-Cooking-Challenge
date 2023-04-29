@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyqqxqtshuyv5"
-path="res://.godot/imported/Bellpepper.png-e164bc7743dcb28976f1722aff25c596.ctex"
+path="res://.godot/imported/Bellpepper.png-abadd473a2738a08da462e370f3f8e85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Recipe 1 copy/Bellpepper.png"
-dest_files=["res://.godot/imported/Bellpepper.png-e164bc7743dcb28976f1722aff25c596.ctex"]
+source_file="res://Assets/Sprite Art/Stir Fried Cauliflower/Bellpepper.png"
+dest_files=["res://.godot/imported/Bellpepper.png-abadd473a2738a08da462e370f3f8e85.ctex"]
 
 [params]
 

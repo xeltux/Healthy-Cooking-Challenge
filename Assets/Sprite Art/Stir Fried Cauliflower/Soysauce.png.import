@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c66l7j2ysst5o"
-path="res://.godot/imported/Soysauce.png-ca2c30e4b3af24cacceda8771b9fc6bc.ctex"
+path="res://.godot/imported/Soysauce.png-7fc5ae1347291bc2bcd70498bc5b90ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Recipe 1 copy/Soysauce.png"
-dest_files=["res://.godot/imported/Soysauce.png-ca2c30e4b3af24cacceda8771b9fc6bc.ctex"]
+source_file="res://Assets/Sprite Art/Stir Fried Cauliflower/Soysauce.png"
+dest_files=["res://.godot/imported/Soysauce.png-7fc5ae1347291bc2bcd70498bc5b90ca.ctex"]
 
 [params]
 
