@@ -21,6 +21,7 @@ BacroundMusic="*res://Scenes/BacroundMusic.tscn"
 
 [display]
 
+mouse_cursor/custom_image="res://Assets/Sprite Art/Knife.png"
 window/stretch/mode="viewport"
 
 [rendering]
