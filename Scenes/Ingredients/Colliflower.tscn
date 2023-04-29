@@ -1,34 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://cw3hqainuvvo5"]
+[gd_scene load_steps=6 format=3 uid="uid://cr2x0od2crfhw"]
 
-[ext_resource type="Texture2D" uid="uid://br73okar88mo4" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Cauliflower.png" id="1_mq2yl"]
-[ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_wrmxl"]
-[ext_resource type="Texture2D" uid="uid://n5m8bwgl0nii" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Choppedcauliflower.png" id="2_2iq3x"]
-[ext_resource type="AudioStream" uid="uid://dlg00sie1aa3k" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="4_dhmno"]
+[ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_3hypm"]
+[ext_resource type="Texture2D" uid="uid://br73okar88mo4" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Cauliflower.png" id="1_i42ul"]
+[ext_resource type="Texture2D" uid="uid://n5m8bwgl0nii" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Choppedcauliflower.png" id="2_vqrgc"]
+[ext_resource type="AudioStream" uid="uid://dlg00sie1aa3k" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="3_eqorw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vte1m"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_colc0"]
 radius = 47.0
 
-[node name="Colliflower" type="Node2D"]
-script = ExtResource("1_wrmxl")
+[node name="Thing" type="Area2D"]
+script = ExtResource("1_3hypm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_colc0")
 
 [node name="Normal" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2.75, 2.75)
-texture = ExtResource("1_mq2yl")
+texture = ExtResource("1_i42ul")
 
 [node name="Chopped" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 scale = Vector2(1.64062, 1.64062)
-texture = ExtResource("2_2iq3x")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_vte1m")
+texture = ExtResource("2_vqrgc")
 
 [node name="Cut" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_dhmno")
+stream = ExtResource("3_eqorw")
 volume_db = 4.216
 
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

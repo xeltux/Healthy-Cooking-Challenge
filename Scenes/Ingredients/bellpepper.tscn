@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dimoou4pmc4a3"]
+
+[ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_4twc2"]
+[ext_resource type="Texture2D" uid="uid://cyqqxqtshuyv5" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Bellpepper.png" id="1_v00ik"]
+[ext_resource type="Texture2D" uid="uid://cbam1ujgpu74e" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Choppedbellpepper.png" id="2_pb3vl"]
+[ext_resource type="AudioStream" uid="uid://dlg00sie1aa3k" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="3_q32ul"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gywxi"]
+radius = 47.0
+
+[node name="Thing" type="Area2D"]
+script = ExtResource("1_4twc2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gywxi")
+
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_v00ik")
+
+[node name="Chopped" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(7, 5)
+scale = Vector2(4.11328, 4.11328)
+texture = ExtResource("2_pb3vl")
+
+[node name="Cut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_q32ul")
+volume_db = 4.216
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
