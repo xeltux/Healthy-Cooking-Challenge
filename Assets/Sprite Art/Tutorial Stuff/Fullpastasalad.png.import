@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://b8w4q4q1dsigr"
+=======
 uid="uid://d1x4x2dby00os"
+>>>>>>> 761f41f84a89bfa1252e101fbd6a924154f38ed6
 path="res://.godot/imported/Fullpastasalad.png-79c85c591754f6e1be5ac013766eb1b0.ctex"
 metadata={
 "vram_texture": false
