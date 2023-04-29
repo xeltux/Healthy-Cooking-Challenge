@@ -27,8 +27,8 @@ game="*res://Scripts/global.gd"
 
 [display]
 
-mouse_cursor/custom_image="res://Assets/Sprite Art/Knife.png"
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://Assets/Sprite Art/Knife.png"
 
 [editor_plugins]
 
