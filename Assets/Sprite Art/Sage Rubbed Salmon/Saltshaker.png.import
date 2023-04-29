@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://su7liqoul3v3"
+=======
 uid="uid://dnn6qgcse7mux"
+>>>>>>> 8c6c55ae0951c5493cec3ee119ac0e604083e9ce
 path="res://.godot/imported/Saltshaker.png-5eee2abb4a3a44ac6269f4c7b3b7da56.ctex"
 metadata={
 "vram_texture": false

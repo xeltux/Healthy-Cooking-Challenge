@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://y063e7m7clf2"
+=======
 uid="uid://w4o8p7gi41n"
+>>>>>>> 8c6c55ae0951c5493cec3ee119ac0e604083e9ce
 path="res://.godot/imported/Pennepasta.png-4c314bb1948138c13a27340f46aea267.ctex"
 metadata={
 "vram_texture": false
