@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cftafeplpuu64"
-path="res://.godot/imported/Sesameoil.png-1f9d22a06e6bca22a1ee25f3daf966a5.ctex"
+path="res://.godot/imported/Sesameoil.png-119a00658c34264ab4d68a1a523f3a8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Recipe 1 copy/Sesameoil.png"
-dest_files=["res://.godot/imported/Sesameoil.png-1f9d22a06e6bca22a1ee25f3daf966a5.ctex"]
+source_file="res://Assets/Sprite Art/Stir Fried Cauliflower/Sesameoil.png"
+dest_files=["res://.godot/imported/Sesameoil.png-119a00658c34264ab4d68a1a523f3a8a.ctex"]
 
 [params]
 

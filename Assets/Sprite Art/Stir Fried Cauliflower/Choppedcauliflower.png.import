@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n5m8bwgl0nii"
-path="res://.godot/imported/Choppedcauliflower.png-e5fc4dcde8694ee4f901f7a96c736879.ctex"
+path="res://.godot/imported/Choppedcauliflower.png-b47b5d2145560b1f9de7c6fd0b45e672.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Recipe 1 copy/Choppedcauliflower.png"
-dest_files=["res://.godot/imported/Choppedcauliflower.png-e5fc4dcde8694ee4f901f7a96c736879.ctex"]
+source_file="res://Assets/Sprite Art/Stir Fried Cauliflower/Choppedcauliflower.png"
+dest_files=["res://.godot/imported/Choppedcauliflower.png-b47b5d2145560b1f9de7c6fd0b45e672.ctex"]
 
 [params]
 

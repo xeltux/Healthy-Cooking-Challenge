@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br73okar88mo4"
-path="res://.godot/imported/Cauliflower.png-cba95752bb988ff8256873a512f833b8.ctex"
+uid="uid://di1swrw4tx3rt"
+path="res://.godot/imported/Nathan.png-0831423f6ed857ce84764acfeafd9580.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite Art/Stir Fried Cauliflower/Cauliflower.png"
-dest_files=["res://.godot/imported/Cauliflower.png-cba95752bb988ff8256873a512f833b8.ctex"]
+source_file="res://Assets/Sprite Art/Nathan.png"
+dest_files=["res://.godot/imported/Nathan.png-0831423f6ed857ce84764acfeafd9580.ctex"]
 
 [params]
 
