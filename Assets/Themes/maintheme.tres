@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c7v4phxm3hrcr"]
+
+[ext_resource type="FontFile" uid="uid://drrha7yyr5rby" path="res://Assets/Text/Press_Start_2P/PressStart2P-Regular.ttf" id="1_ukc54"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca82k"]
+bg_color = Color(0.560784, 1, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2kqt"]
+bg_color = Color(0, 0, 0, 1)
+
+[resource]
+Button/font_sizes/font_size = 19
+Button/fonts/font = ExtResource("1_ukc54")
+Button/styles/hover = SubResource("StyleBoxFlat_ca82k")
+Button/styles/normal = SubResource("StyleBoxFlat_d2kqt")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 29
+Label/fonts/font = ExtResource("1_ukc54")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/normal_font_size = 20
+RichTextLabel/fonts/normal_font = ExtResource("1_ukc54")
