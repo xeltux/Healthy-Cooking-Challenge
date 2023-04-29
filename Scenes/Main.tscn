@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=9 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
 [ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
@@ -6,6 +6,8 @@
 [ext_resource type="Theme" uid="uid://c7v4phxm3hrcr" path="res://Assets/Themes/maintheme.tres" id="4_gylhk"]
 [ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="5_jbujk"]
 [ext_resource type="PackedScene" uid="uid://cw3hqainuvvo5" path="res://Scenes/Ingredients/Colliflower.tscn" id="6_xmb2s"]
+[ext_resource type="PackedScene" uid="uid://cc5pd66d37yk5" path="res://Scenes/Ingredients/bell_pepper.tscn" id="7_beeyf"]
+[ext_resource type="PackedScene" uid="uid://cd43gxnj3p6ui" path="res://Scenes/Ingredients/onion.tscn" id="8_qoe63"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cvkph")
@@ -30,6 +32,15 @@ offset_bottom = 34.0
 theme = ExtResource("4_gylhk")
 text = "Menu"
 flat = true
+
+[node name="Colliflower" parent="." instance=ExtResource("6_xmb2s")]
+position = Vector2(481, 500)
+
+[node name="BellPepper" parent="." instance=ExtResource("7_beeyf")]
+position = Vector2(586, 501)
+
+[node name="Onion" parent="." instance=ExtResource("8_qoe63")]
+position = Vector2(695, 500)
 
 [node name="Menu" type="Node2D" parent="."]
 visible = false
@@ -64,8 +75,5 @@ offset_bottom = 311.0
 theme = ExtResource("4_gylhk")
 theme_override_font_sizes/font_size = 11
 text = "Music"
-
-[node name="Colliflower" parent="." instance=ExtResource("6_xmb2s")]
-position = Vector2(481, 500)
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
