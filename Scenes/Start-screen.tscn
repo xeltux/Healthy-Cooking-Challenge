@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6v386gdp1jcb"]
+[gd_scene load_steps=3 format=3 uid="uid://b6v386gdp1jcb"]
 
+[ext_resource type="Script" path="res://Scripts/Start-screen.gd" id="1_fqtgi"]
 [ext_resource type="Theme" uid="uid://c7v4phxm3hrcr" path="res://Assets/Themes/maintheme.tres" id="1_gngw8"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fqtgi")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -4.0
@@ -35,3 +37,5 @@ theme = ExtResource("1_gngw8")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[wave]Healthy Cooking Challenge"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
