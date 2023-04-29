@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7pqu8irlju5p"]
+
+[ext_resource type="AudioStream" uid="uid://buhlsqrg7d2dc" path="res://Assets/Music/Hackathon.mp3" id="1_vxfjm"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_vxfjm")
+autoplay = true

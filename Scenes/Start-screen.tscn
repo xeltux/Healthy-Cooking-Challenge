@@ -30,12 +30,13 @@ theme = ExtResource("1_gngw8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 192.0
-offset_top = 168.0
+offset_top = 160.0
 offset_right = 960.0
 offset_bottom = 240.0
 theme = ExtResource("1_gngw8")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "[wave]Healthy Cooking Challenge"
+text = "
+[wave]Healthy Cooking Challenge"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
