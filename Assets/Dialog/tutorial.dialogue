@@ -1,0 +1,9 @@
+~ start
+
+Nathan: [[Hi|Hello|Howdy]], welcome to Healthy Cooking Challenge!.
+Nathan: Im your Instructor, Nathan.
+Nathan: Would you like tutorial?
+- Yes
+	Nathan: You picked the first one.
+- No
+=> END
