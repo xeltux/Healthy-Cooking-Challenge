@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c7v4phxm3hrcr"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c7v4phxm3hrcr"]
 
 [ext_resource type="FontFile" uid="uid://drrha7yyr5rby" path="res://Assets/Text/Press_Start_2P/PressStart2P-Regular.ttf" id="1_ukc54"]
 
@@ -8,11 +8,19 @@ bg_color = Color(0.560784, 1, 0.627451, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2kqt"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iftyk"]
+bg_color = Color(1, 0, 0.0156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssouu"]
+bg_color = Color(0, 0, 0, 1)
+
 [resource]
 Button/font_sizes/font_size = 19
 Button/fonts/font = ExtResource("1_ukc54")
 Button/styles/hover = SubResource("StyleBoxFlat_ca82k")
 Button/styles/normal = SubResource("StyleBoxFlat_d2kqt")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_iftyk")
+HSlider/styles/slider = SubResource("StyleBoxFlat_ssouu")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/font_sizes/font_size = 29
 Label/fonts/font = ExtResource("1_ukc54")
