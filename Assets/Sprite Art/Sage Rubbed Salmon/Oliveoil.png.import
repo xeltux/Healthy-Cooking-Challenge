@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://7xjm4hqk76fg"
+=======
+uid="uid://buxcyd1yr217n"
+>>>>>>> 761f41f84a89bfa1252e101fbd6a924154f38ed6
 path="res://.godot/imported/Oliveoil.png-ac2104e9c66926d9c6fa32d2bd46f4f1.ctex"
 metadata={
 "vram_texture": false
