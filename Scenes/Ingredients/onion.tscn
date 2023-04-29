@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cd43gxnj3p6ui"]
+[gd_scene load_steps=6 format=3 uid="uid://cd43gxnj3p6ui"]
 
 [ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_isogi"]
 [ext_resource type="Texture2D" uid="uid://cvlik3k57bq83" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Onion.png" id="2_wx1e2"]
 [ext_resource type="Texture2D" uid="uid://bmb7p4w8nnp6v" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Choppedonion.png" id="3_ufkdo"]
+[ext_resource type="AudioStream" uid="uid://dlg00sie1aa3k" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="4_t3rhh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vte1m"]
 radius = 47.0
@@ -27,5 +28,9 @@ texture = ExtResource("3_ufkdo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_vte1m")
+
+[node name="Cut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t3rhh")
+volume_db = 4.216
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event" flags=18]
