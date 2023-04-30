@@ -27,7 +27,6 @@ game="*res://Scripts/global.gd"
 
 [display]
 
-mouse_cursor/custom_image="res://Assets/Sprite Art/Knife.png"
 window/stretch/mode="viewport"
 
 [editor_plugins]
@@ -39,6 +38,11 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 ui_touch={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"pressed":false,"double_click":false,"script":null)
+]
+}
+mouse_left={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
 ]
 }
 

@@ -9,7 +9,7 @@
 radius = 26.163
 height = 114.551
 
-[node name="carrot" type="Area2D"]
+[node name="carrot" type="Area2D" groups=["ingredients"]]
 script = ExtResource("1_b2y6i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

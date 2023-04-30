@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=11 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
 [ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://c7v4phxm3hrcr" path="res://Assets/Themes/maintheme.tres" id="4_gylhk"]
 [ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="5_jbujk"]
 [ext_resource type="Texture2D" uid="uid://ciytikawppm7p" path="res://Assets/Sprite Art/Ingredientsicon.png" id="9_8tvse"]
+[ext_resource type="PackedScene" uid="uid://cwmhpvighkodm" path="res://Scenes/Sauces/oliveoil.tscn" id="9_ve3ry"]
 [ext_resource type="Texture2D" uid="uid://cvsqbtkkrpsvt" path="res://Assets/Sprite Art/Journalicon.png" id="10_1wcnq"]
 [ext_resource type="Script" path="res://Scripts/Ingredients Menu.gd" id="13_wtgbo"]
 
@@ -28,50 +29,15 @@ position = Vector2(103, 399)
 scale = Vector2(10.2656, 10.8594)
 texture = ExtResource("3_m0bhs")
 
-[node name="MenuButton" type="Button" parent="."]
-offset_left = 23.0
-offset_top = 15.0
-offset_right = 99.0
-offset_bottom = 34.0
-theme = ExtResource("4_gylhk")
-text = "Menu"
-flat = true
-
-[node name="Menu" type="Node2D" parent="."]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Menu"]
-offset_left = 248.0
-offset_top = 104.0
-offset_right = 903.0
-offset_bottom = 590.0
-color = Color(1, 0.937255, 0.870588, 1)
-
-[node name="Label" type="Label" parent="Menu"]
-offset_left = 520.0
-offset_top = 120.0
-offset_right = 636.0
-offset_bottom = 152.0
-theme = ExtResource("4_gylhk")
-text = "Menu"
-
-[node name="HSlider" type="HSlider" parent="Menu"]
-offset_left = 448.0
-offset_top = 248.0
-offset_right = 704.0
-offset_bottom = 264.0
-script = ExtResource("5_jbujk")
-
-[node name="Label2" type="Label" parent="Menu"]
-offset_left = 552.0
-offset_top = 288.0
-offset_right = 607.0
-offset_bottom = 311.0
-theme = ExtResource("4_gylhk")
-theme_override_font_sizes/font_size = 11
-text = "Music"
-
 [node name="JournalMenu" type="Node2D" parent="."]
+
+[node name="Menu_Button" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 92.0
+offset_bottom = 35.0
+theme = ExtResource("4_gylhk")
+text = "Menu"
 
 [node name="Ingredients" type="TextureButton" parent="."]
 texture_filter = 1
@@ -112,6 +78,12 @@ text = "Cook"
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(440, 496)
+
+[node name="Sauces" type="Marker2D" parent="."]
+position = Vector2(264, 312)
+
+[node name="oliveoil" parent="." instance=ExtResource("9_ve3ry")]
+position = Vector2(264, 312)
 
 [node name="IngredientsMenu" type="Node2D" parent="."]
 visible = false
@@ -187,7 +159,41 @@ layout_mode = 2
 theme = ExtResource("4_gylhk")
 text = "Filleted Salmon"
 
-[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[node name="Menu" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+offset_left = 248.0
+offset_top = 104.0
+offset_right = 903.0
+offset_bottom = 590.0
+color = Color(1, 0.937255, 0.870588, 1)
+
+[node name="Label" type="Label" parent="Menu"]
+offset_left = 520.0
+offset_top = 120.0
+offset_right = 636.0
+offset_bottom = 152.0
+theme = ExtResource("4_gylhk")
+text = "Menu"
+
+[node name="HSlider" type="HSlider" parent="Menu"]
+offset_left = 448.0
+offset_top = 248.0
+offset_right = 704.0
+offset_bottom = 264.0
+script = ExtResource("5_jbujk")
+
+[node name="Label2" type="Label" parent="Menu"]
+offset_left = 552.0
+offset_top = 288.0
+offset_right = 607.0
+offset_bottom = 311.0
+theme = ExtResource("4_gylhk")
+theme_override_font_sizes/font_size = 11
+text = "Music"
+
+[connection signal="toggled" from="Menu_Button" to="." method="_on_menu_button_toggled"]
 [connection signal="toggled" from="Ingredients" to="." method="_on_ingredients_toggled"]
 [connection signal="toggled" from="Journal" to="." method="_on_journal_toggled"]
 [connection signal="area_entered" from="pot" to="." method="_on_pot_area_entered"]

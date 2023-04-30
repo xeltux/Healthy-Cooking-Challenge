@@ -7,7 +7,7 @@ const recipie1_final = preload("res://Scenes/Output/tutorial_dish.tscn")
 
 var veggies = []
 
-var recipie1 = ['carrot', 'cheese', 'pennepasta'] # Tutorial
+var recipie1 = ['carrot', 'cheese', 'pennepasta', 'bellpepper'] # Tutorial
 var recipie2 = ['bellpepper', 'cauliflower', 'onion', 'ricevinegar', 'sesameoil', 'soysauce'] # Stir Fried Cauliflower
 var recipie3 = ['sage', 'filleted salmon', 'garlicpowder', 'oliveoil', 'salt']
 var recipie4 = ['cauliflower', 'bellpepper', 'onion']
@@ -27,17 +27,6 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		DialogueManager.show_example_dialogue_balloon(load("res://Assets/Dialog/tutorial.dialogue"), "start")
 
-
-
-func _on_menu_button_pressed():
-	if menuIsBeingUsed == false:
-		$Menu.visible = true
-		menuIsBeingUsed = true
-	else:
-		$Menu.visible = false
-		menuIsBeingUsed = false
-
-
 func _on_ingredients_toggled(button_pressed):
 	if button_pressed == true:
 		$IngredientsMenu.visible = true
@@ -55,7 +44,11 @@ func _on_journal_toggled(button_pressed):
 func _on_pot_area_entered(area):
 	var body_name = area.get_name()
 	veggies.append(body_name)
+	#if area.is_in_group('ingridients'):
 	area.queue_free()
+	#else:
+		#area.position = $Sauces.position
+		#print(veggies)
 
 func arrays_compare(array1, array2):
 	if array1.size() != array2.size(): return false
@@ -76,3 +69,10 @@ func _on_cook_pressed():
 		pass
 	if arrays_compare(veggies, recipie3) == true:
 		pass
+
+
+func _on_menu_button_toggled(button_pressed):
+	if button_pressed == true:
+		$Menu.visible = true
+	else:
+		$Menu.visible = false

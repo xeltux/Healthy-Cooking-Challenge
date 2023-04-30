@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_503i8"]
 radius = 38.0
 
-[node name="filleted salmon" type="Area2D"]
+[node name="filleted salmon" type="Area2D" groups=["ingridients"]]
 script = ExtResource("1_6agvu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

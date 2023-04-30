@@ -6,13 +6,19 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_503i8"]
 radius = 38.0
 
-[node name="pennepasta" type="Area2D"]
+[node name="pennepasta" type="Area2D" groups=["ingridients"]]
 script = ExtResource("1_dgm4s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_503i8")
 
 [node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(3.21875, 3.21875)
+texture = ExtResource("2_3e2go")
+
+[node name="Chopped" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 6)
 scale = Vector2(3.21875, 3.21875)

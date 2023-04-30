@@ -19,4 +19,10 @@ position = Vector2(0, 6)
 scale = Vector2(3.21875, 3.21875)
 texture = ExtResource("2_nss3t")
 
-[connection signal="input_event" from="." to="." method="_on_input_event" flags=18]
+[node name="Chopped" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(3.21875, 3.21875)
+texture = ExtResource("2_nss3t")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
