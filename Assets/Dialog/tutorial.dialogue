@@ -3,7 +3,7 @@
 % Nathan: Hi young chef! Welcome to Healthy Cooking Challenge!
 % Nathan: Hey there young chef! Welcome to Healthy Cooking Challenge!
 % Nathan: Howdy young chef! Welcome to Healthy Cooking Challenge!
-Nathan: Im your Instructor, Nathan.
+Nathan: I'm your Instructor, Nathan.
 Nathan: Would you like tutorial?
 - Yes
 	Nathan: Great!
@@ -17,6 +17,7 @@ Nathan: Would you like tutorial?
 	Nathan: Next, lets start with the basic controls!
 	Nathan: Lets start with cutting the vegitables! Left click on the raw food to cut it up!
 	Nathan: Next, Right click and drag the cut food into the cooking pot!
+	Nathan: Once you added all the ingredients, click the 'Cook' to see if you got a dish!
 	Nathan: Viola! Food mettere a punto!
 	Nathan: If you need me again, press "Space" any time!
 - No

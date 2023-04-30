@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://po1urc1ucbdb"]
+
+[ext_resource type="Texture2D" uid="uid://mslxb2knoi48" path="res://Assets/Sprite Art/Tutorial Stuff/Fullpastasalad.png" id="1_ja8bg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_836wa"]
+size = Vector2(72, 46)
+
+[node name="Tutorial Dish" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("1_ja8bg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_836wa")

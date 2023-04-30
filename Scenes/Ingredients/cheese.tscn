@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://w4m713hkvtw1"]
+
+[ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_424vg"]
+[ext_resource type="Texture2D" uid="uid://b8q5ci2c6nhev" path="res://Assets/Sprite Art/Tutorial Stuff/Cheese.png" id="2_m0ypi"]
+[ext_resource type="Texture2D" uid="uid://hit4vr50pvjd" path="res://Assets/Sprite Art/Tutorial Stuff/Choppedcheese.png" id="3_33s4f"]
+[ext_resource type="AudioStream" uid="uid://d0s1x67ykoitt" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="4_2ek2c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plfjf"]
+size = Vector2(74, 55)
+
+[node name="cheese" type="Area2D"]
+script = ExtResource("1_424vg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 0.5)
+shape = SubResource("RectangleShape2D_plfjf")
+
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(3.21875, 3.21875)
+texture = ExtResource("2_m0ypi")
+
+[node name="Chopped" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(2, 7)
+scale = Vector2(3.36328, 3.36328)
+texture = ExtResource("3_33s4f")
+
+[node name="Cut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_2ek2c")
+volume_db = 4.216
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

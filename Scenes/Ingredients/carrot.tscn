@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://j8c2lcxrohag"]
+
+[ext_resource type="Texture2D" uid="uid://dhd3hrydsje1b" path="res://Assets/Sprite Art/Tutorial Stuff/Carrotfinal.png" id="1_6o86o"]
+[ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_b2y6i"]
+[ext_resource type="Texture2D" uid="uid://djbxnj0sej50e" path="res://Assets/Sprite Art/Tutorial Stuff/Choppercarrot.png" id="2_ib04c"]
+[ext_resource type="AudioStream" uid="uid://d0s1x67ykoitt" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="3_girls"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct20l"]
+radius = 26.163
+height = 114.551
+
+[node name="carrot" type="Area2D"]
+script = ExtResource("1_b2y6i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 10)
+rotation = 0.785398
+shape = SubResource("CapsuleShape2D_ct20l")
+
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(3.21875, 3.21875)
+texture = ExtResource("1_6o86o")
+
+[node name="Chopped" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(2, 7)
+scale = Vector2(3.36328, 3.36328)
+texture = ExtResource("2_ib04c")
+
+[node name="Cut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_girls")
+volume_db = 4.216
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

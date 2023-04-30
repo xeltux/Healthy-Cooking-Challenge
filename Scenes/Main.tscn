@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://di1swrw4tx3rt" path="res://Assets/Sprite Art/Nathan.png" id="3_m0bhs"]
 [ext_resource type="Theme" uid="uid://c7v4phxm3hrcr" path="res://Assets/Themes/maintheme.tres" id="4_gylhk"]
 [ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="5_jbujk"]
-[ext_resource type="PackedScene" uid="uid://cr2x0od2crfhw" path="res://Scenes/Ingredients/colliflower.tscn" id="8_7axrm"]
-[ext_resource type="PackedScene" uid="uid://dimoou4pmc4a3" path="res://Scenes/Ingredients/bellpepper.tscn" id="8_iav6a"]
-[ext_resource type="PackedScene" uid="uid://b7t4otv6leu73" path="res://Scenes/Ingredients/onion.tscn" id="8_qoe63"]
 [ext_resource type="Texture2D" uid="uid://ciytikawppm7p" path="res://Assets/Sprite Art/Ingredientsicon.png" id="9_8tvse"]
+[ext_resource type="PackedScene" uid="uid://w4m713hkvtw1" path="res://Scenes/Ingredients/cheese.tscn" id="9_olmlo"]
 [ext_resource type="Texture2D" uid="uid://cvsqbtkkrpsvt" path="res://Assets/Sprite Art/Journalicon.png" id="10_1wcnq"]
+[ext_resource type="PackedScene" uid="uid://j8c2lcxrohag" path="res://Scenes/Ingredients/carrot.tscn" id="10_tngbi"]
+[ext_resource type="PackedScene" uid="uid://c0ko71dmmu1i3" path="res://Scenes/Ingredients/pennepasta.tscn" id="11_7cyan"]
 [ext_resource type="Script" path="res://Scripts/Ingredients Menu.gd" id="13_wtgbo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bepv4"]
@@ -74,43 +74,7 @@ theme = ExtResource("4_gylhk")
 theme_override_font_sizes/font_size = 11
 text = "Music"
 
-[node name="cauliflower" parent="." instance=ExtResource("8_7axrm")]
-position = Vector2(305, 505)
-
-[node name="onion" parent="." instance=ExtResource("8_qoe63")]
-position = Vector2(568, 499)
-
-[node name="bellpepper" parent="." instance=ExtResource("8_iav6a")]
-position = Vector2(438, 500)
-
 [node name="JournalMenu" type="Node2D" parent="."]
-
-[node name="IngredientsMenu" type="Node2D" parent="."]
-visible = false
-script = ExtResource("13_wtgbo")
-
-[node name="ColorRect" type="ColorRect" parent="IngredientsMenu"]
-offset_left = 296.0
-offset_top = 120.0
-offset_right = 726.0
-offset_bottom = 595.0
-color = Color(1, 0.937255, 0.870588, 1)
-
-[node name="Label" type="Label" parent="IngredientsMenu"]
-offset_left = 352.0
-offset_top = 144.0
-offset_right = 671.0
-offset_bottom = 176.0
-theme = ExtResource("4_gylhk")
-text = "Ingredients"
-
-[node name="Bell Pepper" type="Button" parent="IngredientsMenu"]
-offset_left = 416.0
-offset_top = 216.0
-offset_right = 624.0
-offset_bottom = 248.0
-theme = ExtResource("4_gylhk")
-text = "Bell Pepper"
 
 [node name="Ingredients" type="TextureButton" parent="."]
 texture_filter = 1
@@ -139,7 +103,110 @@ position = Vector2(960, 448)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_bepv4")
 
+[node name="Cook" type="Button" parent="."]
+texture_filter = 1
+offset_left = 888.0
+offset_top = 592.0
+offset_right = 1032.0
+offset_bottom = 633.0
+theme = ExtResource("4_gylhk")
+theme_override_font_sizes/font_size = 33
+text = "Cook"
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(440, 496)
+
+[node name="cheese" parent="." instance=ExtResource("9_olmlo")]
+position = Vector2(288, 496)
+
+[node name="carrot" parent="." instance=ExtResource("10_tngbi")]
+position = Vector2(416, 488)
+
+[node name="pennepasta" parent="." instance=ExtResource("11_7cyan")]
+position = Vector2(544, 496)
+
+[node name="IngredientsMenu" type="Node2D" parent="."]
+visible = false
+script = ExtResource("13_wtgbo")
+
+[node name="ColorRect" type="ColorRect" parent="IngredientsMenu"]
+offset_left = 296.0
+offset_top = 120.0
+offset_right = 726.0
+offset_bottom = 595.0
+color = Color(1, 0.937255, 0.870588, 1)
+
+[node name="Label" type="Label" parent="IngredientsMenu"]
+offset_left = 352.0
+offset_top = 144.0
+offset_right = 671.0
+offset_bottom = 176.0
+theme = ExtResource("4_gylhk")
+text = "Ingredients"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="IngredientsMenu"]
+offset_left = 368.0
+offset_top = 192.0
+offset_right = 664.0
+offset_bottom = 576.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="IngredientsMenu/ScrollContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="IngredientsMenu/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="bellpepper" type="Button" parent="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("4_gylhk")
+text = "Bell Pepper"
+
+[node name="carrot" type="Button" parent="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("4_gylhk")
+text = "Carrot"
+
+[node name="cheese" type="Button" parent="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("4_gylhk")
+text = "Cheese"
+
+[node name="cauliflower" type="Button" parent="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("4_gylhk")
+text = "Cauliflower"
+
+[node name="onion" type="Button" parent="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("4_gylhk")
+text = "Onion"
+
+[node name="pennepasta" type="Button" parent="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("4_gylhk")
+text = "Pennepasta"
+
+[node name="sage" type="Button" parent="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("4_gylhk")
+text = "Sage
+"
+
+[node name="filleted_salmon" type="Button" parent="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("4_gylhk")
+text = "Filleted Salmon"
+
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="toggled" from="Ingredients" to="." method="_on_ingredients_toggled"]
 [connection signal="toggled" from="Journal" to="." method="_on_journal_toggled"]
-[connection signal="body_entered" from="pot" to="." method="_on_pot_body_entered"]
+[connection signal="area_entered" from="pot" to="." method="_on_pot_area_entered"]
+[connection signal="pressed" from="Cook" to="." method="_on_cook_pressed"]
+[connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/bellpepper" to="IngredientsMenu" method="_on_bellpepper_pressed"]
+[connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/carrot" to="IngredientsMenu" method="_on_carrot_pressed"]
+[connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/cheese" to="IngredientsMenu" method="_on_cheese_pressed"]
+[connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/cauliflower" to="IngredientsMenu" method="_on_cauliflower_pressed"]
+[connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/onion" to="IngredientsMenu" method="_on_onion_pressed"]
+[connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/pennepasta" to="IngredientsMenu" method="_on_pennepasta_pressed"]

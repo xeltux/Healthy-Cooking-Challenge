@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm2hbyamhmrie"]
+
+[ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="1_b3u6l"]
+[ext_resource type="Texture2D" uid="uid://eu154ekfoaql" path="res://Assets/Sprite Art/Sage Rubbed Salmon/Sage.png" id="2_odq8l"]
+[ext_resource type="Texture2D" uid="uid://hth5fc11ahkh" path="res://Assets/Sprite Art/Sage Rubbed Salmon/Choppedsage.png" id="3_hp752"]
+[ext_resource type="AudioStream" uid="uid://d0s1x67ykoitt" path="res://Assets/SFX/210025__samkolber__knifecuttingboard.wav" id="4_dh53y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i0dxt"]
+radius = 47.0
+
+[node name="sage" type="Area2D"]
+script = ExtResource("1_b3u6l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i0dxt")
+
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("2_odq8l")
+
+[node name="Chopped" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+scale = Vector2(1.64062, 1.64062)
+texture = ExtResource("3_hp752")
+
+[node name="Cut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dh53y")
+volume_db = 4.216
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
