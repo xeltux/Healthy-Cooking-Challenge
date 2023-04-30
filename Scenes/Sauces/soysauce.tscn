@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://5jg0pytrgaps"]
+
+[ext_resource type="Script" path="res://Scripts/Ingridients-2.gd" id="1_x2bwc"]
+[ext_resource type="Texture2D" uid="uid://c66l7j2ysst5o" path="res://Assets/Sprite Art/Stir Fried Cauliflower/Soysauce.png" id="2_j55ia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvdaj"]
+size = Vector2(26, 89)
+
+[node name="soysauce" type="Area2D"]
+script = ExtResource("1_x2bwc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_tvdaj")
+
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(3.21875, 3.21875)
+texture = ExtResource("2_j55ia")
+
+[node name="Chopped" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(3.21875, 3.21875)
+texture = ExtResource("2_j55ia")
+
+[connection signal="input_event" from="." to="." method="_on_input_event" flags=18]

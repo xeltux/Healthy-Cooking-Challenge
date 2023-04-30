@@ -9,7 +9,12 @@ size = Vector2(72, 46)
 [node name="Tutorial Dish" type="Area2D"]
 script = ExtResource("1_s0sig")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("1_ja8bg")
+
+[node name="Chopped" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2.75, 2.75)
 texture = ExtResource("1_ja8bg")

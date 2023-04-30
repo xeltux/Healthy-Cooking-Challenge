@@ -4,6 +4,7 @@ var jmenu_in_use = false
 var imenu_in_use = false
 
 const recipie1_final = preload("res://Scenes/Output/tutorial_dish.tscn")
+const recipie2_final = preload("res://Scenes/Output/stir_fried_cauliflower.tscn")
 
 var veggies = []
 
@@ -18,11 +19,10 @@ func _ready():
 	DialogueManager.show_example_dialogue_balloon(load("res://Assets/Dialog/tutorial.dialogue"), "start")
 	$Menu.visible = false
 
-var menuIsBeingUsed = false
-
 
 func _process(delta):
 	pass
+
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		DialogueManager.show_example_dialogue_balloon(load("res://Assets/Dialog/tutorial.dialogue"), "start")
@@ -44,11 +44,12 @@ func _on_journal_toggled(button_pressed):
 func _on_pot_area_entered(area):
 	var body_name = area.get_name()
 	veggies.append(body_name)
-	#if area.is_in_group('ingridients'):
-	area.queue_free()
-	#else:
-		#area.position = $Sauces.position
-		#print(veggies)
+	if area.is_in_group('ingridients'):
+		area.queue_free()
+	else:
+		game.pouring = true
+		area.position = $Sauces.position
+		print(veggies)
 
 func arrays_compare(array1, array2):
 	if array1.size() != array2.size(): return false
@@ -66,7 +67,9 @@ func _on_cook_pressed():
 		get_parent().add_child(tutorial_dish)
 		tutorial_dish.position = $Marker2D.position
 	if arrays_compare(veggies, recipie2) == true:
-		pass
+		var dish1 = recipie2_final.instantiate()
+		get_parent().add_child(dish1)
+		dish1.position = $Marker2D.position
 	if arrays_compare(veggies, recipie3) == true:
 		pass
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=14 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
 [ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://ciytikawppm7p" path="res://Assets/Sprite Art/Ingredientsicon.png" id="9_8tvse"]
 [ext_resource type="PackedScene" uid="uid://cwmhpvighkodm" path="res://Scenes/Sauces/oliveoil.tscn" id="9_ve3ry"]
 [ext_resource type="Texture2D" uid="uid://cvsqbtkkrpsvt" path="res://Assets/Sprite Art/Journalicon.png" id="10_1wcnq"]
+[ext_resource type="PackedScene" uid="uid://bngocdwpucb8o" path="res://Scenes/Sauces/ricevinegar.tscn" id="10_y265v"]
+[ext_resource type="PackedScene" uid="uid://sm6mklw1kwql" path="res://Scenes/Sauces/sesameoil.tscn" id="11_mjgvj"]
+[ext_resource type="PackedScene" uid="uid://5jg0pytrgaps" path="res://Scenes/Sauces/soysauce.tscn" id="12_fokmu"]
 [ext_resource type="Script" path="res://Scripts/Ingredients Menu.gd" id="13_wtgbo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bepv4"]
@@ -85,6 +88,49 @@ position = Vector2(264, 312)
 [node name="oliveoil" parent="." instance=ExtResource("9_ve3ry")]
 position = Vector2(264, 312)
 
+[node name="Menu" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+offset_left = 248.0
+offset_top = 104.0
+offset_right = 903.0
+offset_bottom = 590.0
+color = Color(1, 0.937255, 0.870588, 1)
+
+[node name="Label" type="Label" parent="Menu"]
+offset_left = 520.0
+offset_top = 120.0
+offset_right = 636.0
+offset_bottom = 152.0
+theme = ExtResource("4_gylhk")
+text = "Menu"
+
+[node name="HSlider" type="HSlider" parent="Menu"]
+offset_left = 448.0
+offset_top = 248.0
+offset_right = 704.0
+offset_bottom = 264.0
+script = ExtResource("5_jbujk")
+
+[node name="Label2" type="Label" parent="Menu"]
+offset_left = 552.0
+offset_top = 288.0
+offset_right = 607.0
+offset_bottom = 311.0
+theme = ExtResource("4_gylhk")
+theme_override_font_sizes/font_size = 11
+text = "Music"
+
+[node name="ricevinegar" parent="." instance=ExtResource("10_y265v")]
+position = Vector2(304, 312)
+
+[node name="sesameoil" parent="." instance=ExtResource("11_mjgvj")]
+position = Vector2(344, 312)
+
+[node name="soysauce" parent="." instance=ExtResource("12_fokmu")]
+position = Vector2(384, 312)
+
 [node name="IngredientsMenu" type="Node2D" parent="."]
 visible = false
 script = ExtResource("13_wtgbo")
@@ -158,40 +204,6 @@ text = "Sage
 layout_mode = 2
 theme = ExtResource("4_gylhk")
 text = "Filleted Salmon"
-
-[node name="Menu" type="Node2D" parent="."]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Menu"]
-offset_left = 248.0
-offset_top = 104.0
-offset_right = 903.0
-offset_bottom = 590.0
-color = Color(1, 0.937255, 0.870588, 1)
-
-[node name="Label" type="Label" parent="Menu"]
-offset_left = 520.0
-offset_top = 120.0
-offset_right = 636.0
-offset_bottom = 152.0
-theme = ExtResource("4_gylhk")
-text = "Menu"
-
-[node name="HSlider" type="HSlider" parent="Menu"]
-offset_left = 448.0
-offset_top = 248.0
-offset_right = 704.0
-offset_bottom = 264.0
-script = ExtResource("5_jbujk")
-
-[node name="Label2" type="Label" parent="Menu"]
-offset_left = 552.0
-offset_top = 288.0
-offset_right = 607.0
-offset_bottom = 311.0
-theme = ExtResource("4_gylhk")
-theme_override_font_sizes/font_size = 11
-text = "Music"
 
 [connection signal="toggled" from="Menu_Button" to="." method="_on_menu_button_toggled"]
 [connection signal="toggled" from="Ingredients" to="." method="_on_ingredients_toggled"]
