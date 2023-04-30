@@ -46,14 +46,14 @@ func _on_pennepasta_pressed():
 
 
 func _on_sage_pressed():
-	var scene = preload('res://Scenes/Ingredients/sage.tscn')
+	var scene = preload('res://Scenes/Ingredients/pennepasta.tscn')
 	var out = scene.instantiate()
 	get_parent().add_child(out)
 
 
 
 func _on_filleted_salmon_pressed():
-	var scene = preload('res://Scenes/Ingredients/filleted_salmon.tscn')
+	var scene = preload('res://Scenes/Ingredients/pennepasta.tscn')
 	var out = scene.instantiate()
 	get_parent().add_child(out)
 

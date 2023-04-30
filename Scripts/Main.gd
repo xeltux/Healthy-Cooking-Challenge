@@ -5,7 +5,6 @@ var imenu_in_use = false
 
 const recipie1_final = preload("res://Scenes/Output/tutorial_dish.tscn")
 const recipie2_final = preload("res://Scenes/Output/stir_fried_cauliflower.tscn")
-const recipie3_final = preload("res://Scenes/Output/sage_rubbed_salmon.tscn")
 
 var veggies = []
 
@@ -49,7 +48,6 @@ func _on_pot_area_entered(area):
 		area.queue_free()
 	else:
 		game.pouring = true
-		$Timer.start()
 		area.position = $Sauces.position
 		print(veggies)
 
@@ -68,17 +66,12 @@ func _on_cook_pressed():
 		var tutorial_dish = recipie1_final.instantiate()
 		get_parent().add_child(tutorial_dish)
 		tutorial_dish.position = $Marker2D.position
-		game.recipies_discovered.append('Pennepasta')
 	if arrays_compare(veggies, recipie2) == true:
 		var dish1 = recipie2_final.instantiate()
 		get_parent().add_child(dish1)
 		dish1.position = $Marker2D.position
-		game.recipies_discovered.append('Stir Fried Cauliflower')
 	if arrays_compare(veggies, recipie3) == true:
-		var dish1 = recipie2_final.instantiate()
-		get_parent().add_child(dish1)
-		dish1.position = $Marker2D.position
-		game.recipies_discovered.append('Sage Rubbed Salmon')
+		pass
 
 
 func _on_menu_button_toggled(button_pressed):
@@ -86,15 +79,3 @@ func _on_menu_button_toggled(button_pressed):
 		$Menu.visible = true
 	else:
 		$Menu.visible = false
-
-
-func _on_reset_pressed():
-	veggies = []
-
-
-func _on_timer_timeout():
-	game.pouring = false
-
-
-func _on_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Start-screen.tscn")

@@ -1,39 +1,21 @@
-[gd_scene load_steps=18 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=14 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
 [ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
 [ext_resource type="Texture2D" uid="uid://di1swrw4tx3rt" path="res://Assets/Sprite Art/Nathan.png" id="3_m0bhs"]
 [ext_resource type="Theme" uid="uid://c7v4phxm3hrcr" path="res://Assets/Themes/maintheme.tres" id="4_gylhk"]
+[ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="5_jbujk"]
 [ext_resource type="Texture2D" uid="uid://ciytikawppm7p" path="res://Assets/Sprite Art/Ingredientsicon.png" id="9_8tvse"]
 [ext_resource type="PackedScene" uid="uid://cwmhpvighkodm" path="res://Scenes/Sauces/oliveoil.tscn" id="9_ve3ry"]
 [ext_resource type="Texture2D" uid="uid://cvsqbtkkrpsvt" path="res://Assets/Sprite Art/Journalicon.png" id="10_1wcnq"]
 [ext_resource type="PackedScene" uid="uid://bngocdwpucb8o" path="res://Scenes/Sauces/ricevinegar.tscn" id="10_y265v"]
 [ext_resource type="PackedScene" uid="uid://sm6mklw1kwql" path="res://Scenes/Sauces/sesameoil.tscn" id="11_mjgvj"]
 [ext_resource type="PackedScene" uid="uid://5jg0pytrgaps" path="res://Scenes/Sauces/soysauce.tscn" id="12_fokmu"]
-[ext_resource type="PackedScene" uid="uid://byr1xmqy7b68g" path="res://Scenes/Sauces/salt.tscn" id="13_q5jpy"]
 [ext_resource type="Script" path="res://Scripts/Ingredients Menu.gd" id="13_wtgbo"]
-[ext_resource type="PackedScene" uid="uid://b22lkbwmbwbnx" path="res://Scenes/Sauces/garlicpowder.tscn" id="14_3rhd5"]
-[ext_resource type="PackedScene" uid="uid://crsilf1yes0gq" path="res://Scenes/Sauces/pepper.tscn" id="15_ags6j"]
-[ext_resource type="Texture2D" uid="uid://ba6nxlp2j7amh" path="res://Assets/Sprite Art/Menu.png" id="16_ekg8f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bepv4"]
 radius = 96.0
 height = 352.0
-
-[sub_resource type="GDScript" id="GDScript_ou6cw"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$Label.anchor_left = 0
-	$Label.anchor_right = 1
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cvkph")
@@ -49,6 +31,16 @@ texture_filter = 1
 position = Vector2(103, 399)
 scale = Vector2(10.2656, 10.8594)
 texture = ExtResource("3_m0bhs")
+
+[node name="JournalMenu" type="Node2D" parent="."]
+
+[node name="Menu_Button" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 92.0
+offset_bottom = 35.0
+theme = ExtResource("4_gylhk")
+text = "Menu"
 
 [node name="Ingredients" type="TextureButton" parent="."]
 texture_filter = 1
@@ -80,9 +72,9 @@ shape = SubResource("CapsuleShape2D_bepv4")
 [node name="Cook" type="Button" parent="."]
 texture_filter = 1
 offset_left = 888.0
-offset_top = 608.0
+offset_top = 592.0
 offset_right = 1032.0
-offset_bottom = 649.0
+offset_bottom = 633.0
 theme = ExtResource("4_gylhk")
 theme_override_font_sizes/font_size = 33
 text = "Cook"
@@ -95,24 +87,6 @@ position = Vector2(264, 312)
 
 [node name="oliveoil" parent="." instance=ExtResource("9_ve3ry")]
 position = Vector2(264, 312)
-
-[node name="salt" parent="." instance=ExtResource("13_q5jpy")]
-position = Vector2(480, 320)
-
-[node name="garlicpowder" parent="." instance=ExtResource("14_3rhd5")]
-position = Vector2(536, 320)
-
-[node name="pepper" parent="." instance=ExtResource("15_ags6j")]
-position = Vector2(592, 320)
-
-[node name="ricevinegar" parent="." instance=ExtResource("10_y265v")]
-position = Vector2(304, 312)
-
-[node name="sesameoil" parent="." instance=ExtResource("11_mjgvj")]
-position = Vector2(344, 312)
-
-[node name="soysauce" parent="." instance=ExtResource("12_fokmu")]
-position = Vector2(384, 312)
 
 [node name="Menu" type="Node2D" parent="."]
 visible = false
@@ -132,13 +106,30 @@ offset_bottom = 152.0
 theme = ExtResource("4_gylhk")
 text = "Menu"
 
-[node name="Button" type="Button" parent="Menu"]
-offset_left = 384.0
-offset_top = 224.0
-offset_right = 760.0
-offset_bottom = 251.0
+[node name="HSlider" type="HSlider" parent="Menu"]
+offset_left = 448.0
+offset_top = 248.0
+offset_right = 704.0
+offset_bottom = 264.0
+script = ExtResource("5_jbujk")
+
+[node name="Label2" type="Label" parent="Menu"]
+offset_left = 552.0
+offset_top = 288.0
+offset_right = 607.0
+offset_bottom = 311.0
 theme = ExtResource("4_gylhk")
-text = "Back to home screen"
+theme_override_font_sizes/font_size = 11
+text = "Music"
+
+[node name="ricevinegar" parent="." instance=ExtResource("10_y265v")]
+position = Vector2(304, 312)
+
+[node name="sesameoil" parent="." instance=ExtResource("11_mjgvj")]
+position = Vector2(344, 312)
+
+[node name="soysauce" parent="." instance=ExtResource("12_fokmu")]
+position = Vector2(384, 312)
 
 [node name="IngredientsMenu" type="Node2D" parent="."]
 visible = false
@@ -214,6 +205,7 @@ layout_mode = 2
 theme = ExtResource("4_gylhk")
 text = "Filleted Salmon"
 
+<<<<<<< HEAD
 [node name="Reset" type="Button" parent="."]
 offset_left = 880.0
 offset_top = 560.0
@@ -263,11 +255,13 @@ offset_bottom = 80.0
 texture_normal = ExtResource("16_ekg8f")
 stretch_mode = 0
 
+=======
+[connection signal="toggled" from="Menu_Button" to="." method="_on_menu_button_toggled"]
+>>>>>>> parent of 568cf29 (Final edits)
 [connection signal="toggled" from="Ingredients" to="." method="_on_ingredients_toggled"]
 [connection signal="toggled" from="Journal" to="." method="_on_journal_toggled"]
 [connection signal="area_entered" from="pot" to="." method="_on_pot_area_entered"]
 [connection signal="pressed" from="Cook" to="." method="_on_cook_pressed"]
-[connection signal="pressed" from="Menu/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/bellpepper" to="IngredientsMenu" method="_on_bellpepper_pressed"]
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/carrot" to="IngredientsMenu" method="_on_carrot_pressed"]
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/cheese" to="IngredientsMenu" method="_on_cheese_pressed"]
@@ -276,6 +270,3 @@ stretch_mode = 0
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/pennepasta" to="IngredientsMenu" method="_on_pennepasta_pressed"]
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/sage" to="IngredientsMenu" method="_on_sage_pressed"]
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/filleted_salmon" to="IngredientsMenu" method="_on_filleted_salmon_pressed"]
-[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="toggled" from="MenuButton" to="." method="_on_menu_button_toggled"]
