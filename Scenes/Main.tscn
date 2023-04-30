@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhju4s0arbeov"]
+[gd_scene load_steps=10 format=3 uid="uid://bhju4s0arbeov"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_cvkph"]
 [ext_resource type="Texture2D" uid="uid://bqr614q20dp5u" path="res://Assets/Sprite Art/Cuttingboardupscaled.png" id="2_tmyru"]
@@ -6,10 +6,7 @@
 [ext_resource type="Theme" uid="uid://c7v4phxm3hrcr" path="res://Assets/Themes/maintheme.tres" id="4_gylhk"]
 [ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="5_jbujk"]
 [ext_resource type="Texture2D" uid="uid://ciytikawppm7p" path="res://Assets/Sprite Art/Ingredientsicon.png" id="9_8tvse"]
-[ext_resource type="PackedScene" uid="uid://w4m713hkvtw1" path="res://Scenes/Ingredients/cheese.tscn" id="9_olmlo"]
 [ext_resource type="Texture2D" uid="uid://cvsqbtkkrpsvt" path="res://Assets/Sprite Art/Journalicon.png" id="10_1wcnq"]
-[ext_resource type="PackedScene" uid="uid://j8c2lcxrohag" path="res://Scenes/Ingredients/carrot.tscn" id="10_tngbi"]
-[ext_resource type="PackedScene" uid="uid://c0ko71dmmu1i3" path="res://Scenes/Ingredients/pennepasta.tscn" id="11_7cyan"]
 [ext_resource type="Script" path="res://Scripts/Ingredients Menu.gd" id="13_wtgbo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bepv4"]
@@ -116,15 +113,6 @@ text = "Cook"
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(440, 496)
 
-[node name="cheese" parent="." instance=ExtResource("9_olmlo")]
-position = Vector2(288, 496)
-
-[node name="carrot" parent="." instance=ExtResource("10_tngbi")]
-position = Vector2(416, 488)
-
-[node name="pennepasta" parent="." instance=ExtResource("11_7cyan")]
-position = Vector2(544, 496)
-
 [node name="IngredientsMenu" type="Node2D" parent="."]
 visible = false
 script = ExtResource("13_wtgbo")
@@ -210,3 +198,5 @@ text = "Filleted Salmon"
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/cauliflower" to="IngredientsMenu" method="_on_cauliflower_pressed"]
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/onion" to="IngredientsMenu" method="_on_onion_pressed"]
 [connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/pennepasta" to="IngredientsMenu" method="_on_pennepasta_pressed"]
+[connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/sage" to="IngredientsMenu" method="_on_sage_pressed"]
+[connection signal="pressed" from="IngredientsMenu/ScrollContainer/VBoxContainer/GridContainer/filleted_salmon" to="IngredientsMenu" method="_on_filleted_salmon_pressed"]

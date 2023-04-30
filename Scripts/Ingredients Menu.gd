@@ -43,3 +43,17 @@ func _on_pennepasta_pressed():
 	var out = scene.instantiate()
 	get_parent().add_child(out)
 	scene.position = $Marker2D.position
+
+
+func _on_sage_pressed():
+	var scene = preload('res://Scenes/Ingredients/pennepasta.tscn')
+	var out = scene.instantiate()
+	get_parent().add_child(out)
+	scene.position = $Marker2D.position
+
+
+func _on_filleted_salmon_pressed():
+	var scene = preload('res://Scenes/Ingredients/pennepasta.tscn')
+	var out = scene.instantiate()
+	get_parent().add_child(out)
+	scene.position = $Marker2D.position
