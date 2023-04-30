@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwmhpvighkodm"]
+
+[ext_resource type="Script" path="res://Scripts/Ingridients-2.gd" id="1_0k73c"]
+[ext_resource type="Texture2D" uid="uid://dui4nwsavtsey" path="res://Assets/Sprite Art/Sage Rubbed Salmon/Oliveoil.png" id="2_nss3t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvdaj"]
+size = Vector2(26, 89)
+
+[node name="oliveoil" type="Area2D"]
+script = ExtResource("1_0k73c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_tvdaj")
+
+[node name="Normal" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(3.21875, 3.21875)
+texture = ExtResource("2_nss3t")
+
+[connection signal="input_event" from="." to="." method="_on_input_event" flags=18]

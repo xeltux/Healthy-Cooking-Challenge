@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://po1urc1ucbdb"]
+[gd_scene load_steps=4 format=3 uid="uid://po1urc1ucbdb"]
 
 [ext_resource type="Texture2D" uid="uid://mslxb2knoi48" path="res://Assets/Sprite Art/Tutorial Stuff/Fullpastasalad.png" id="1_ja8bg"]
+[ext_resource type="Script" path="res://Scripts/Ingridients-2.gd" id="1_s0sig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_836wa"]
 size = Vector2(72, 46)
 
 [node name="Tutorial Dish" type="Area2D"]
+script = ExtResource("1_s0sig")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
