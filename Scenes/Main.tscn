@@ -115,6 +115,7 @@ position = Vector2(344, 312)
 position = Vector2(384, 312)
 
 [node name="Menu" type="Node2D" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Menu"]
 offset_left = 248.0
@@ -223,7 +224,6 @@ theme_override_font_sizes/font_size = 33
 text = "Reset"
 
 [node name="JournalMenu" type="Node2D" parent="."]
-visible = false
 script = SubResource("GDScript_ou6cw")
 
 [node name="ColorRect" type="ColorRect" parent="JournalMenu"]
@@ -242,19 +242,15 @@ theme = ExtResource("4_gylhk")
 text = "Journal"
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="JournalMenu"]
+[node name="Label2" type="Label" parent="JournalMenu"]
+texture_filter = 1
 offset_left = 360.0
 offset_top = 184.0
-offset_right = 656.0
-offset_bottom = 512.0
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
-
-[node name="Label" type="Label" parent="JournalMenu/ScrollContainer"]
-texture_filter = 1
-layout_mode = 2
+offset_right = 361.0
+offset_bottom = 200.0
 theme = ExtResource("4_gylhk")
 theme_override_font_sizes/font_size = 16
+text = "Work in Progress"
 autowrap_mode = 2
 
 [node name="Timer" type="Timer" parent="."]
