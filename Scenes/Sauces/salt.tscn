@@ -1,28 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://crsilf1yes0gq"]
+[gd_scene load_steps=4 format=3 uid="uid://byr1xmqy7b68g"]
 
-[ext_resource type="Script" path="res://Scripts/Ingridients-2.gd" id="1_emljk"]
-[ext_resource type="Texture2D" uid="uid://cde75i5gpt7c6" path="res://Assets/Sprite Art/Sage Rubbed Salmon/Peppershaker.png" id="2_ssnfm"]
+[ext_resource type="Script" path="res://Scripts/Ingridients-2.gd" id="1_3j6sj"]
+[ext_resource type="Texture2D" uid="uid://bcno86kgf5cfy" path="res://Assets/Sprite Art/Sage Rubbed Salmon/Saltshaker.png" id="2_paojj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvdaj"]
-size = Vector2(26, 89)
+size = Vector2(48, 72)
 
-[node name="pepper" type="Area2D"]
-script = ExtResource("1_emljk")
+[node name="salt" type="Area2D"]
+script = ExtResource("1_3j6sj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5.5)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_tvdaj")
 
 [node name="Normal" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 6)
 scale = Vector2(3.21875, 3.21875)
-texture = ExtResource("2_ssnfm")
+texture = ExtResource("2_paojj")
 
 [node name="Chopped" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 6)
 scale = Vector2(3.21875, 3.21875)
-texture = ExtResource("2_ssnfm")
+texture = ExtResource("2_paojj")
 
 [connection signal="input_event" from="." to="." method="_on_input_event" flags=18]
